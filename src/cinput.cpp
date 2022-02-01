@@ -81,7 +81,7 @@ Scene parse_scene(std::string inputfile)
 		 * Read the documentation for other return values, which won't
 		 * be handled here.
 		*/
-		if(strcmp(cmd, "sphere") == 0)
+		else if(strcmp(cmd, "sphere") == 0)
 		{
 			// Declare variables that will be read in
 			vec3 p;
@@ -111,7 +111,7 @@ Scene parse_scene(std::string inputfile)
 				   sphere.position.x, sphere.position.y, sphere.position.z, sphere.radius);
 		}
 
-		if(strcmp(cmd, "eye") == 0)
+		else if(strcmp(cmd, "eye") == 0)
 		{
 			vec3 eye;
 			sscanf(line, "eye %f %f %f", &eye.x, &eye.y, &eye.z);
@@ -119,7 +119,7 @@ Scene parse_scene(std::string inputfile)
 			printf("Eye position: %f %f %f\n", scene.eye_position.x, scene.eye_position.y, scene.eye_position.z);
 		}
 
-		if(strcmp(cmd, "viewdir") == 0)
+		else if(strcmp(cmd, "viewdir") == 0)
 		{
 			vec3 viewdir;
 			sscanf(line, "viewdir %f %f %f", &viewdir.x, &viewdir.y, &viewdir.z);
@@ -127,7 +127,7 @@ Scene parse_scene(std::string inputfile)
 			printf("Viewdir: %f %f %f\n", scene.viewdirection.x, scene.viewdirection.y, scene.viewdirection.z);
 		}
 
-		if(strcmp(cmd, "updir") == 0)
+		else if(strcmp(cmd, "updir") == 0)
 		{
 			vec3 updir;
 			sscanf(line, "updir %f %f %f", &updir.x, &updir.y, &updir.z);
@@ -135,7 +135,7 @@ Scene parse_scene(std::string inputfile)
 			printf("updir: %f %f %f\n", scene.updir.x, scene.updir.y, scene.updir.z);
 		}
 
-		if(strcmp(cmd, "vfov") == 0)
+		else if(strcmp(cmd, "vfov") == 0)
 		{
 			float vfov;
 			sscanf(line, "vfov %f", &vfov);
