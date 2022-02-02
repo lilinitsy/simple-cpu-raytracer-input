@@ -111,14 +111,6 @@ Scene parse_scene(std::string inputfile)
 }
 
 
-
-
-
-
-
-
-
-
 int main(int argc, char *argv[])
 {
 	/* First we should check the number of arguments.
